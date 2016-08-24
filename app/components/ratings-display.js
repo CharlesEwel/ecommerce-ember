@@ -1,9 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  averageRating: Ember.computed('ratings', function(){
-    var ratingList= this.get('ratings');
+  // sortBy: ['score:desc'],
+  // sortedRatings: Ember.computed.sort('ratings', 'sortBy'),
+
+  averageRating: Ember.computed('ratings.[]', function(){
+    var ratingList= this.get('ratings')
     var total = 0;
+    debugger;
     var numberOfRatings = ratingList.get('length');
     if(numberOfRatings===0) {
       return "No reviews have been written yet"
@@ -13,5 +17,5 @@ export default Ember.Component.extend({
       })
       return total/numberOfRatings;
     }
-  }),
+  })
 });

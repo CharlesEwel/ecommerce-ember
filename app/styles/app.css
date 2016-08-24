@@ -1,3 +1,16 @@
+body {
+  background-color: #002b80;
+  color: white;
+}
+
+button {
+  background-color: black;
+}
+.navbar {
+  background-color: #00cc00;
+  border: none;
+}
+
 .navbar-right {
   float: right;
 }

@@ -40,7 +40,6 @@ export default Ember.Route.extend({
       newRating.save().then(function() {
         return product.save();
       });
-      this.transitionTo('product', params.product);
     }
   }
 });
