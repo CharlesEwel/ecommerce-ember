@@ -5,5 +5,7 @@
 {{update-product product=model.product category-list=model.categories update="update"}}
 
 <button {{action 'addToCart' model.product}}>Add to Cart</button>
-
 <button {{action 'deleteProduct' model.product}}>Delete Product</button>
+{{new-rating product=model.product saveRating="saveRating"}}
+
+{{ratings-display ratings=model.product.ratings}}

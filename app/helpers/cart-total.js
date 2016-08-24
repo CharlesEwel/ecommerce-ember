@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export function cartTotal(params/*, hash*/) {
+export function cartTotal(params) {
   var cart = params[0];
   var total = 0;
 

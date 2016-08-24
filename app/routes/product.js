@@ -32,6 +32,15 @@ export default Ember.Route.extend({
     addToCart(item) {
       this.get('shoppingCart').add(item);
       this.transitionTo('index')
+    },
+    saveRating(params) {
+      var newRating = this.store.createRecord('rating', params);
+      var product = params.product;
+      product.get('ratings').addObject(newRating);
+      newRating.save().then(function() {
+        return product.save();
+      });
+      this.transitionTo('product', params.product);
     }
   }
 });
