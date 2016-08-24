@@ -11,5 +11,12 @@
     "title": "Seahawks Socks",
     "description": "These stylish socks are white and green",
     "price": 8
+  }],
+  "categories":[{
+    "title": "Seahawks Apparel"
+  }, {
+    "title": "Disc Golf Discs"
+  }, {
+    "title": "Balls"
   }]
 }

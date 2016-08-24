@@ -16,6 +16,18 @@
         {{input type="number" value=product.price id="price"}}
       </div>
 
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select name="category" onchange={{action "updateValue" value="target.value"}}>
+          <option value="(indexOf category-list product.category)" selected="selected">{{product.category.title}}</option>
+          {{#each category-list as |category index|}}
+            {{#unless (eq category.title product.category.title)}}
+              <option value={{index}} selected={{eq selectedCategory index}}>{{category.title}}</option>
+            {{/unless}}
+          {{/each}}
+        </select>
+      </div>
+
       <button {{action 'update' product}}>Save</button>
     </form>
   </div>

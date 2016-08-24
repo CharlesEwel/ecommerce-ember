@@ -1,3 +1,5 @@
-{{product-list products=model}}
+{{product-list products=model.products}}
 
-{{new-product saveProduct="saveProduct"}}
+{{new-product saveProduct="saveProduct" category-list=model.categories}}
+
+{{display-cart}}

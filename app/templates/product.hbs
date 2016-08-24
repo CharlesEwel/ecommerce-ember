@@ -1,7 +1,9 @@
-{{model.title}}
+{{model.product.title}}
 <br>
-{{model.description}}
+{{model.product.description}}
 
-{{update-product product=model update="update"}}
+{{update-product product=model.product category-list=model.categories update="update"}}
 
-<button {{action 'deleteProduct' model}}>Delete Product</button>
+<button {{action 'addToCart' model.product}}>Add to Cart</button>
+
+<button {{action 'deleteProduct' model.product}}>Delete Product</button>
