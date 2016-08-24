@@ -1,3 +1,22 @@
-<h2 id="title">Seahawks Swag</h2>
+<div class="container">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
 
-{{outlet}}
+      <!-- Hamburger -->
+        <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> -->
+      <!-- End Hamburger -->
+      <a class="navbar-brand">{{#link-to 'index'}}SeahawkSwag{{/link-to}}</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>{{#link-to "cart"}}<span class="glyphicon glyphicon-shopping-cart"></span>Cart{{/link-to}}</li>
+    </ul>
+  </div><!-- /.container-fluid -->
+</nav>
+{{ outlet }}
+</div>

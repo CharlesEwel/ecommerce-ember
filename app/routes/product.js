@@ -30,8 +30,6 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     addToCart(item) {
-      console.log("addToCart executes")
-      console.log(item.get('title'))
       this.get('shoppingCart').add(item);
       this.transitionTo('index')
     }

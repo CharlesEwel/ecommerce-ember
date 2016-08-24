@@ -5,7 +5,5 @@ export default Ember.Service.extend({
 
   add(item) {
     this.get('items').pushObject(item);
-    console.log("add executes")
-    console.log(this.get('items').get('length'))
   }
 });
