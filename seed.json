@@ -1,0 +1,15 @@
+{
+  "products":[{
+    "title": "Seahawks Hat",
+    "description": "This stylish hat is blue and green",
+    "price": 10
+  }, {
+    "title": "Seahawks Sweatshirt",
+    "description": "This stylish sweatshirt is blue and white",
+    "price": 25
+  }, {
+    "title": "Seahawks Socks",
+    "description": "These stylish socks are white and green",
+    "price": 8
+  }]
+}
