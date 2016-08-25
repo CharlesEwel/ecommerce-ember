@@ -26,7 +26,12 @@ export default Ember.Route.extend({
       });
     },
     deleteProduct(product) {
-      product.destroyRecord();
+      var rating_deletions = product.get('ratings').map(function(rating) {
+        return rating.destroyRecord();
+      });
+      Ember.RSVP.all(rating_deletions).then(function() {
+        return product.destroyRecord();
+      });
       this.transitionTo('index');
     },
     addToCart(item) {
