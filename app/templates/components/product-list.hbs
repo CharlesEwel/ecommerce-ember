@@ -3,6 +3,7 @@
   {{#each products as |product|}}
     {{#link-to 'product' product.id}}
       <li>
+        <img src={{product.image}}>
         <h3>{{product.title}}, ${{product.price}}</h3>
       </li>
     {{/link-to}}

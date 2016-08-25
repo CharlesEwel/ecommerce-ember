@@ -15,6 +15,7 @@ export default Ember.Component.extend({
         title: this.get('title'),
         description: this.get('description'),
         price: this.get('price'),
+        image: this.get('image'),
         category: this.get('category-list').objectAt(this.get('selectedCategory'))
       };
       this.set('addNewProduct', false);

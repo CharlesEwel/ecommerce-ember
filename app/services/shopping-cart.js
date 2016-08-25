@@ -13,9 +13,7 @@ export default Ember.Service.extend({
       }
     })
     if(alreadyInCart) {
-      console.log("Already in cart: " + itemIndex)
       this.get('items')[itemIndex][1]+=1;
-      console.log(this.get('items')[itemIndex])
     } else {
       this.get('items').pushObject([item, 1]);
     }
@@ -28,8 +26,6 @@ export default Ember.Service.extend({
         itemIndex = index;
       }
     })
-    console.log(itemIndex)
-    console.log(this.get('items')[itemIndex])
     if(this.get('items')[itemIndex][1]===1) {
       this.get('items').removeObject(this.get('items')[itemIndex]);
     } else {

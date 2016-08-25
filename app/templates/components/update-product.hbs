@@ -17,6 +17,11 @@
       </div>
 
       <div class="form-group">
+        <label for="image">Image</label>
+        {{input value=product.image id="image"}}
+      </div>
+
+      <div class="form-group">
         <label for="category">Category</label>
         <select name="category" onchange={{action "updateValue" value="target.value"}}>
           <option value="(indexOf category-list product.category)" selected="selected">{{product.category.title}}</option>
