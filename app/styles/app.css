@@ -12,6 +12,14 @@ button {
   border: none;
 }
 
+a {
+  color: #00cc00;
+}
+
+.navbar a {
+  color: navy;
+}
+
 .navbar-right {
   float: right;
 }
@@ -22,4 +30,17 @@ form {
 
 form button {
   background-color: #00cc00;
+}
+
+.logo {
+  max-width: 50%;
+  padding-top: 1%;
+}
+
+.seahawkswag {
+  font-weight: bolder;
+}
+
+li {
+  list-style: none;
 }

@@ -1,9 +1,10 @@
-{{#each shoppingCart.items as |item|}}
-  {{get-quantity item}}x {{get-title item}}: ${{get-price item}}
-  <button {{action "remove" item}}>Remove</button>
-
-  <br>
-{{/each}}
-
-
-Total Price: ${{totalPrice}}
+{{#if shoppingCart.items}}
+  {{#each shoppingCart.items as |item|}}
+    {{get-quantity item}}x {{#link-to 'product' (get-id item)}}{{get-title item}}{{/link-to}}: ${{get-price item}}
+    <button {{action "remove" item}}>Remove</button>
+    <br>
+  {{/each}}
+  Total Price: ${{totalPrice}}
+{{else}}
+  <p>Your cart is empty!</p>
+{{/if}}

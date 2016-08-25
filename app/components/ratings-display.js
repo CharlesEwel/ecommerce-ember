@@ -14,7 +14,7 @@ export default Ember.Component.extend({
       ratingList.forEach(function(review) {
         total += parseInt(review.get('score'));
       })
-      return total/numberOfRatings;
+      return (total/numberOfRatings).toFixed(1);
     }
   })
 });
