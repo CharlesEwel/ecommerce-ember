@@ -1,5 +1,7 @@
 {{#each shoppingCart.items as |item|}}
-  {{item.title}}: ${{item.price}} <button {{action "remove" item}}>Remove</button>
+  {{get-quantity item}}x {{get-title item}}: ${{get-price item}}
+  <button {{action "remove" item}}>Remove</button>
+
   <br>
 {{/each}}
 
