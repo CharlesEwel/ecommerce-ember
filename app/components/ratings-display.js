@@ -7,7 +7,6 @@ export default Ember.Component.extend({
   averageRating: Ember.computed('ratings.[]', function(){
     var ratingList= this.get('ratings')
     var total = 0;
-    debugger;
     var numberOfRatings = ratingList.get('length');
     if(numberOfRatings===0) {
       return "No reviews have been written yet"
