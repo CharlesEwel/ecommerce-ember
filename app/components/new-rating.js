@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     },
     saveRating() {
       var params = {
-        score: this.get('score'),
+        score: parseInt(this.get('score')),
         comments: this.get('comments'),
         product: this.get('product'),
       };

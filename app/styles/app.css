@@ -1,4 +1,4 @@
-body {
+body, form label {
   background-color: #002b80;
   color: white;
 }
@@ -6,6 +6,7 @@ body {
 button {
   background-color: black;
 }
+
 .navbar {
   background-color: #00cc00;
   border: none;
@@ -13,4 +14,12 @@ button {
 
 .navbar-right {
   float: right;
+}
+
+form {
+  color: black;
+}
+
+form button {
+  background-color: #00cc00;
 }

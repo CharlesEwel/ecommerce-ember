@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  // sortBy: ['score:desc'],
-  // sortedRatings: Ember.computed.sort('ratings', 'sortBy'),
+  sortBy: ['score:desc'],
+  sortedRatings: Ember.computed.sort('ratings', 'sortBy'),
 
-  averageRating: Ember.computed('ratings.[]', function(){
+  averageRating: Ember.computed('ratings.@each.score', function(){
     var ratingList= this.get('ratings')
     var total = 0;
     var numberOfRatings = ratingList.get('length');
